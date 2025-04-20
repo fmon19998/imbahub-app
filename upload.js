@@ -36,8 +36,8 @@ router.get('/files', (req, res) => {
   });
 });
 
-// Endpoint root cek status
-router.get('/', (req, res) => {
+// Endpoint root cek status (optional)
+router.get('/status', (req, res) => {
   res.send('IMBAHUB API ONLINE 🔥 - Endpoint utama: POST /upload');
 });
 
