@@ -1,32 +1,16 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>IMBAHUB</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Upload Video ke IMBAHUB</title>
 </head>
 <body>
-  <div class="container">
-    <img src="IMBAHUB-4-19-2025.png" alt="IMBAHUB Logo" class="logo" />
-    <h1>IMBAHUB Video Streaming</h1>
-    <div id="login-section">
-      <input type="password" id="adminPassword" placeholder="Masukkan Password Admin">
-      <button onclick="login()">Login Admin</button>
-    </div>
-    <div id="upload-section" style="display:none;">
-      <h3>Upload Video</h3>
-      <input type="text" id="videoTitle" placeholder="Judul Video"><br><br>
-      <input type="file" id="videoFile" accept="video/mp4"><br><br>
-      <select id="videoCategory">
-        <option value="barat">BARAT</option>
-        <option value="jepang">JEPANG</option>
-        <option value="indonesia">INDONESIA</option>
-      </select><br><br>
-      <button onclick="uploadVideo()">Upload</button>
-    </div>
-  </div>
-  <script src="/script.js"></script>
+  <h1>Form Upload Video 🎥</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="video" accept="video/*" required />
+    <button type="submit">Upload</button>
+  </form>
+
+  <br><br>
+  <a href="/files" target="_blank">📁 Lihat Semua File yang Sudah Diupload</a>
 </body>
 </html>
