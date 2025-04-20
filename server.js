@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 
-// Import route upload
-const uploadRoute = require('./upload/upload');
-app.use(uploadRoute); // semua route di-handle uploadRoute
+// Pastikan ini benar:
+const uploadRoute = require('./upload');
+app.use(uploadRoute);
 
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
