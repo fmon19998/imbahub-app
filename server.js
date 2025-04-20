@@ -35,3 +35,6 @@ const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   console.log(`IMBAHUB backend jalan di PORT ${PORT}`);
 });
+// server.js
+const uploadRoute = require('./upload/upload'); // kalau file-nya di folder upload/
+app.use(uploadRoute);
