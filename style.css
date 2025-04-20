@@ -1,1 +1,17 @@
 
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.container {
+  margin-top: 30px;
+}
+.logo {
+  max-width: 150px;
+}
+input, select, button {
+  padding: 10px;
+  margin: 5px;
+}
