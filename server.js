@@ -1,8 +1,12 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 
-// Pastikan ini benar:
-const uploadRoute = require('./upload');
+// Serve file HTML (frontend)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Upload route
+const uploadRoute = require('./upload/upload');
 app.use(uploadRoute);
 
 const PORT = process.env.PORT || 10000;
