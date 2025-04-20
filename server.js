@@ -1,8 +1,12 @@
-const express = require('express');
-const multer = require('multer');
-const path = require('path');
+const express = require("express");
+const multer = require("multer");
+const path = require("path");
 
 const app = express();
+
+app.get("/", (req, res) => {
+  res.send("IMBAHUB API ONLINE 🔥 - Endpoint utama: POST /upload");
+});
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -10,7 +14,7 @@ const storage = multer.diskStorage({
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + "-" + file.originalname);
-  }
+  },
 });
 
 const upload = multer({ storage: storage });
@@ -20,7 +24,6 @@ app.post("/upload", upload.single("video"), (req, res) => {
 });
 
 const PORT = process.env.PORT || 10000;
-
 app.listen(PORT, () => {
   console.log(`IMBAHUB backend jalan di PORT ${PORT}`);
 });
